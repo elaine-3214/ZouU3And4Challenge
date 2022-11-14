@@ -22,9 +22,12 @@ public class SecurePassword {
        Return false if any of the above security requirements are not fulfilled.
     */
     public boolean isSecure() {
-        /* to be implemented */
-        // You should first write the six private "helper" methods
-        // below and use them as needed in this method’s implementation
+        if (isLongEnough() == true && containsUppercase() == true && containsLowercase() == true
+        && containsDigit() == true && containsSpecialSymbol() == true) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
@@ -43,10 +46,23 @@ public class SecurePassword {
         The password must contain a special symbol: ! @ # $ % ^ & * ?"
     */
     public String status() {
-        /* to be implemented */
-
-        // You should first write the six private "helper" methods
-        // below and use them as needed in this method’s implementation
+        String temp = "";
+        if(!isLongEnough()) {
+            temp += "The password must contain at least 8 characters" + "\n";
+        }
+        if(!containsUppercase()) {
+            temp += "The password must contain at least one uppercase letter" + "\n";
+        }
+        if(!containsLowercase()) {
+            temp += "The password must contain at least one lowerCase letter" + "\n";
+        }
+        if(!containsDigit()) {
+            temp += "The password must contain at least one digit" + "\n";
+        }
+        if(!containsSpecialSymbol()) {
+            temp += "The password must contain at least one special symbol: ! @ # $ % ^ & * ?" + "\n";
+        }
+        return temp;
     }
 
 
@@ -58,7 +74,11 @@ public class SecurePassword {
        and false otherwise.
      */
     private boolean isLongEnough() {
-        /* to be implemented */
+        if(password.length()>=8) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
@@ -74,14 +94,16 @@ public class SecurePassword {
     /* Returns true if the password has at least one lowercase letter and false otherwise.
      */
     private boolean containsLowercase() {
-        /* to be implemented */
+        String lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+        return checkString(lowerCaseLetters);
     }
 
 
     /* Returns true if the password has at least one digit and false otherwise.
      */
     private boolean containsDigit() {
-        /* to be implemented */
+        String numbers = "0123456789";
+        return checkString(numbers);
     }
 
 
@@ -89,7 +111,8 @@ public class SecurePassword {
        ! @ # $ % ^ & * ?    and false otherwise.
      */
     private boolean containsSpecialSymbol() {
-        /* to be implemented */
+        String special = "!@#$%^&*?";
+        return checkString(special);
     }
 
     /* Checks characterString to see if password contains at least one
@@ -102,6 +125,13 @@ public class SecurePassword {
         characterString.
      */
     private boolean checkString(String characterString) {
-        /* to be implemented */
+        boolean temp1 = false;
+        for(int i = 0; i<password.length(); i++) {
+            String temp = password.substring(i, i+1);
+            if(characterString.contains(temp)) {
+                return temp1 = true;
+            }
+        }
+        return temp1;
     }
 }
