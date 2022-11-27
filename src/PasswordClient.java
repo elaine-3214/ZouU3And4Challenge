@@ -10,16 +10,19 @@ public class PasswordClient {
         System.out.println("- Contains at least one lowercase letter");
         System.out.println("- Contains at least one numeric digit");
         System.out.println("- Contains at least one of these symbols: ! @ # $ % ^ & * ?");
-        System.out.print("\nEnter your secure password: ");
-        String password = scanner.nextLine();
 
+        boolean random = true;
 
-        SecurePassword temp = new SecurePassword(password);
-        while (!temp.isSecure()) {
-            System.out.println(temp.status());
+        while (random) {
             System.out.print("\nEnter your secure password: ");
-            password = scanner.nextLine();
+            String password = scanner.nextLine();
+            SecurePassword temp = new SecurePassword(password);
+            System.out.println(temp.status());
+            if (temp.isSecure()) {
+                random = false;
+            }
         }
+        System.out.println("Password is secure");
     }
 }
 

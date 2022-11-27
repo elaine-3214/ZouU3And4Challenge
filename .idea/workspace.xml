@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eeb9b289-eb77-4a52-b828-855c15854db9" name="Changes" comment="">
+    <list default="true" id="eeb9b289-eb77-4a52-b828-855c15854db9" name="Changes" comment="draft 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PasswordClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecurePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecurePassword.java" afterDir="false" />
@@ -29,6 +29,20 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="PasswordClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PasswordClient" />
+      <module name="ZouU3And4Challenge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PasswordClient" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,6 +52,14 @@
       <option name="presentableId" value="Default" />
       <updated>1668099551777</updated>
     </task>
+    <task id="LOCAL-00001" summary="draft 2">
+      <created>1668388902705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668388902705</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -50,5 +72,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="draft 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="draft 2" />
   </component>
 </project>
